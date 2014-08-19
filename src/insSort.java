@@ -3,14 +3,14 @@ public class insSort {
 
 	public static void main(String[] args)
 	{
-		Random rnd=new Random();
+		Random rastgele=new Random();
 	int[] dizi= new int[100000];
 	
 	
 	
 	for(int i=0; i<dizi.length; i++)
 	{
-		dizi[i]=rnd.nextInt(100000);
+		dizi[i]=rastgele.nextInt(100000);
 	}
 	
 //Diziyi büyükten küçüğe sıralama
@@ -26,28 +26,28 @@ public class insSort {
 	}
 // Büyükten küçüğe sıralanan diziyi insertionSort metoduna gönderme
 
-	long start = System.currentTimeMillis();
+	long basla = System.currentTimeMillis();
 	
 
 	insertionSort(dizi);
 	
 	
-	long end = System.currentTimeMillis();
+	long bitir = System.currentTimeMillis();
 	
  
-	 System.out.println("Time: " + (end-start) + " milisaniye");
+	 System.out.println("Sure: " + (bitir-basla) + " milisaniye");
 }
 
 
-private static void insertionSort(int[] array) {
-	for (int i = 1; i < array.length; i++) {
+private static void insertionSort(int[] dizi) {
+	for (int i = 1; i < dizi.length; i++) {
 		int siralanacakDeger = array[i];
 		int j = i;
-		while (j > 0 && array[j - 1] > siralanacakDeger) {
-			array[j] = array[j - 1];
+		while (j > 0 && dizi[j - 1] > siralanacakDeger) {
+			dizi[j] = dizi[j - 1];
 			j--;
 		}
-		array[j] = siralanacakDeger;
+		dizi[j] = siralanacakDeger;
 	}
 
 	}
